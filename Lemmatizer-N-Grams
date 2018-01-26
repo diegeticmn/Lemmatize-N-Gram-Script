@@ -21,7 +21,7 @@ from nltk.corpus import stopwords
 #               NLTK
 
 #Open input data - replace text file with your data (in the form of a text file in the same directory as this file)
-with open('clientreports.txt', encoding='utf-8') as f:
+with open('YOURTEXTFILEHERE.txt', encoding='utf-8') as f:
     text=f.read().replace('\n', ' ')
 
 # split the document into sentences and tokenize each sentence
@@ -105,7 +105,7 @@ frequencies = Counter([])
 
 #Iterates through sentences, finds ngrams and counts frequences
 for i in lemma_list:
-	trigrams = ngrams(i, 2) #Replace 3 with n for n-grams
+	trigrams = ngrams(i, 1) #Replace 1 with n for n-grams
 	frequencies += Counter(trigrams)
 
 #Write frequeinces to output file - output format is (NGRAM), FREQ
